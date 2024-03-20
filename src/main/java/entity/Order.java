@@ -1,0 +1,45 @@
+package entity;
+
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+
+@Entity
+@NoArgsConstructor
+public class Order {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
+    private Integer oderID;
+
+    @ManyToOne
+    @Getter
+    private Customer customer;
+
+    @OneToMany
+    private ArrayList<Product> products;
+
+    public Order(Customer customer, ArrayList<Product> products){
+        this.customer = customer;
+        this.products = products;
+    }
+
+    public Order(Integer oderID, Customer customer, ArrayList<Product> products){
+        this.oderID = oderID;
+        this.customer = customer;
+        this.products = products;
+    }
+
+    public float getOrderPrice(){
+        float fullPrice = 0.0f;
+        for (Product product: products){
+            fullPrice+=product.getPrice();
+        }
+        return fullPrice;
+    }
+
+
+}
