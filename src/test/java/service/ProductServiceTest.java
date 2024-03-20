@@ -71,13 +71,13 @@ class ProductServiceTest {
 
         Product newProduct = new Product(1, 22.34f, "Menü 1");
         when(productPersistenceMock.findById(any())).thenReturn(Optional.of(newProduct));
-        newProduct.setDescription("Menü 2");
+        //newProduct.setDescription("Menü 2");
         when(productPersistenceMock.save(any())).thenAnswer(invocation -> {
             Product product1 = invocation.getArgument(0);
             product1.setDescription("Menü 2");
             return product1;
         });
-
+        productService.changeProductDescription(newProduct.getProductID(),"Menü 2");
         Product updatedProduct = productService.getProductByID(1);
 
         assertEquals(1, updatedProduct.getProductID());
@@ -93,13 +93,15 @@ class ProductServiceTest {
 
         Product newProduct = new Product(1, 22.34f, "Menü 1");
         when(productPersistenceMock.findById(any())).thenReturn(Optional.of(newProduct));
-        newProduct.setPrice(12.64f);
+
+
         when(productPersistenceMock.save(any())).thenAnswer(invocation -> {
             Product product1 = invocation.getArgument(0);
             product1.setPrice(12.64f);
             return product1;
         });
 
+        productService.changeProductPrice(newProduct.getProductID(),12.64f);
         Product updatedProduct = productService.getProductByID(1);
 
         assertEquals(1, updatedProduct.getProductID());
