@@ -1,6 +1,7 @@
 package entity;
 
 
+import exceptions.InvalidOrderException;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +24,10 @@ public class Order {
     private ArrayList<Product> products;
 
     public Order(Customer customer, ArrayList<Product> products){
+        if (customer == null)
+            throw new InvalidOrderException("Customer of order cannot be null!");
+        if (products==null||products.isEmpty())
+            throw  new InvalidOrderException("Product list of order cannot be null or empty!");
         this.customer = customer;
         this.products = products;
     }
