@@ -6,7 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import persistence.ProductPersistence;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 public class ProductService {
@@ -52,6 +57,12 @@ public class ProductService {
         } else {
             throw new ProductServiceException("No Product found!");
         }
+    }
+
+    public ArrayList<Product> getAllProducts(){
+        List<Product> products =  StreamSupport.stream(productPersistence.findAll().spliterator(), false)
+                .toList();
+        return new ArrayList<>(products);
     }
 
 

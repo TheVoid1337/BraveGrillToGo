@@ -10,7 +10,9 @@ import org.springframework.stereotype.Service;
 import persistence.OrderPersistence;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.StreamSupport;
 
 @Service
 public class OrderService {
@@ -44,6 +46,21 @@ public class OrderService {
         }else {
             throw new OrderServiceException("No order found!");
         }
+    }
+
+    public Order getOrderByID(Integer orderID){
+        Optional<Order> orderOptional  = persistence.findById(orderID);
+        if (orderOptional.isPresent()){
+            return orderOptional.get();
+        }else {
+            throw new OrderServiceException("No order found!");
+        }
+    }
+
+    public ArrayList<Order> getAllOrders(){
+        List<Order> orders =  StreamSupport.stream(persistence.findAll().spliterator(), false)
+                .toList();
+        return new ArrayList<>(orders);
     }
 
 

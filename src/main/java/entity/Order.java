@@ -9,21 +9,19 @@ import lombok.Setter;
 
 import java.util.ArrayList;
 
+@Getter
 @Entity
 @NoArgsConstructor
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
     @Setter
     private Integer oderID;
 
     @ManyToOne
-    @Getter
     private Customer customer;
 
     @OneToMany
-    @Getter
     private ArrayList<Product> products;
 
     public Order(Customer customer, ArrayList<Product> products){
