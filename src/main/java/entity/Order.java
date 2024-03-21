@@ -1,10 +1,11 @@
 package entity;
 
 
-import exceptions.InvalidOrderException;
+import exceptions.entity.InvalidOrderException;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
 
@@ -14,6 +15,7 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
+    @Setter
     private Integer oderID;
 
     @ManyToOne
@@ -21,6 +23,7 @@ public class Order {
     private Customer customer;
 
     @OneToMany
+    @Getter
     private ArrayList<Product> products;
 
     public Order(Customer customer, ArrayList<Product> products){
