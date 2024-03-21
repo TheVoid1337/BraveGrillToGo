@@ -1,6 +1,6 @@
 package valueObjects;
 
-import exceptions.InvalidEmailAddressException;
+import exceptions.valueObjects.InvalidEmailAddressException;
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

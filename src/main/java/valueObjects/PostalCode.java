@@ -1,6 +1,6 @@
 package valueObjects;
 
-import exceptions.InvalidPostalCodeException;
+import exceptions.valueObjects.InvalidPostalCodeException;
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

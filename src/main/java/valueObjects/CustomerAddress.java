@@ -1,6 +1,6 @@
 package valueObjects;
 
-import exceptions.InvalidCustomerAddressException;
+import exceptions.valueObjects.InvalidCustomerAddressException;
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

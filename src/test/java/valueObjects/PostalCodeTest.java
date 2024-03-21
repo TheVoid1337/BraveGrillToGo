@@ -1,6 +1,6 @@
 package valueObjects;
 
-import exceptions.InvalidPostalCodeException;
+import exceptions.valueObjects.InvalidPostalCodeException;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import types.CountryType;

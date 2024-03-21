@@ -1,7 +1,7 @@
 package service;
 
 import entity.Customer;
-import exceptions.CustomerServiceException;
+import exceptions.service.CustomerServiceException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

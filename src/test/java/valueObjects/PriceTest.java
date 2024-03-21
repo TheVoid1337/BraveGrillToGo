@@ -1,6 +1,6 @@
 package valueObjects;
 
-import exceptions.InvalidPriceException;
+import exceptions.valueObjects.InvalidPriceException;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

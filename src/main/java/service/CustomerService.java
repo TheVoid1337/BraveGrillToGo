@@ -1,7 +1,7 @@
 package service;
 
 import entity.Customer;
-import exceptions.CustomerServiceException;
+import exceptions.service.CustomerServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import persistence.CustomerPersistence;

@@ -1,7 +1,7 @@
 package entity;
 
 
-import exceptions.InvalidCustomerException;
+import exceptions.entity.InvalidCustomerException;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

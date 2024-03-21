@@ -1,6 +1,6 @@
 package valueObjects;
 
-import exceptions.InvalidPriceException;
+import exceptions.valueObjects.InvalidPriceException;
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,6 +1,6 @@
 package valueObjects;
 
-import exceptions.InvalidCustomerAddressException;
+import exceptions.valueObjects.InvalidCustomerAddressException;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import types.CountryType;

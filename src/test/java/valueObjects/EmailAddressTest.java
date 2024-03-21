@@ -1,6 +1,6 @@
 package valueObjects;
 
-import exceptions.InvalidEmailAddressException;
+import exceptions.valueObjects.InvalidEmailAddressException;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

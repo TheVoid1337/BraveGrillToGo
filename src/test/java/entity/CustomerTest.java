@@ -1,6 +1,6 @@
 package entity;
 
-import exceptions.InvalidCustomerException;
+import exceptions.entity.InvalidCustomerException;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import types.CountryType;

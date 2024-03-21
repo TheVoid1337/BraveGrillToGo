@@ -1,11 +1,10 @@
 package service;
 
 import entity.Product;
-import exceptions.ProductServiceException;
+import exceptions.service.ProductServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import persistence.ProductPersistence;
-import valueObjects.Price;
 
 import java.util.Optional;
 
@@ -21,8 +20,7 @@ public class ProductService {
 
     public Integer addProduct(float price, String description){
         Product product = new Product(price,description);
-        this.productPersistence.save(product);
-        return product.getProductID();
+        return this.productPersistence.save(product).getProductID();
     }
 
     public Product getProductByID(int id){

@@ -1,6 +1,6 @@
 package entity;
 
-import exceptions.InvalidProductException;
+import exceptions.entity.InvalidProductException;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
