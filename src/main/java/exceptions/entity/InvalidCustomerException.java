@@ -1,4 +1,4 @@
-package exceptions;
+package exceptions.entity;
 
 public class InvalidCustomerException extends RuntimeException{
     public InvalidCustomerException(String message){

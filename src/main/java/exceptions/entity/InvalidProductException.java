@@ -1,4 +1,4 @@
-package exceptions;
+package exceptions.entity;
 
 public class InvalidProductException extends RuntimeException{
     public InvalidProductException(String message){

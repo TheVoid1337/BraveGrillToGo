@@ -1,4 +1,4 @@
-package exceptions;
+package exceptions.valueObjects;
 
 public class InvalidPriceException extends RuntimeException{
     public InvalidPriceException(String message){
